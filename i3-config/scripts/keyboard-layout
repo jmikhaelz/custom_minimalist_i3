@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+KBD=$(/usr/bin/xkblayout-state print '%n')
+
+case "$KBD" in
+  English)
+    echo "US"
+    ;;
+  Spanish)
+    echo "LATAM"
+    ;;
+  *)
+    echo "$KBD"
+    ;;
+esac
