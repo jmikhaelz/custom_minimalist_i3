@@ -1,0 +1,17 @@
+#!/usr/bin/env sh
+
+# Formato de fecha para mostrar en la barra
+DATEFMT=${DATEFMT:-"+%d-%m-%Y"}
+
+# Si se hace clic izquierdo (botón 1), abrir el calendario
+if [ "$BLOCK_BUTTON" = "1" ]; then
+    yad --calendar \
+        --width=200 --height=200 \
+        --undecorated --fixed \
+        --close-on-unfocus --no-buttons \
+        --skip-taskbar \
+        > /dev/null &
+fi
+
+# Mostrar la fecha en el bloque
+echo "$LABEL$(date "$DATEFMT")"
