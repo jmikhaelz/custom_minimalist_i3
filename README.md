@@ -57,7 +57,10 @@ chsh -s /bin/zsh
 
 ###	5. Aplica los archivos de configuración
 
+> ⚠️ EPrecuacion en copiar archivos , si no te sientes seguro haz una copia de tu configuracion default con una extension de .old.
+
 ```bash
+
 cp -r i3-config ~/.config/i3
 
 cp picom/picom.conf ~/.config/picom/
